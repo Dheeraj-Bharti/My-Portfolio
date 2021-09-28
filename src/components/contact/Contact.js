@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 
 import emailjs from 'emailjs-com';
+import { GitHub, Instagram, LinkedIn, Twitter } from "@material-ui/icons";
 
 const Contact = () => {
     const [isMessage, setMessage] = useState(false);
@@ -33,6 +34,20 @@ const Contact = () => {
                     <button type="submit">Send</button>
                     {isMessage && <span>Thanks..!, i'll reply ASAP :)</span>}
                 </form>
+                <div className="itemContainer">
+                       <a target="_blank" href="https://github.com/Dheeraj-Bharti">
+                       <GitHub className="icon"/>
+                       </a>
+                       <a target="_blank" href="https://www.linkedin.com/in/dheeraj-bharti-70a4baa4/">
+                       <LinkedIn className="icon"/>
+                       </a>
+                       <a target="_blank" href="https://www.instagram.com/dheerajb234/">
+                       <Instagram className="icon"/>
+                       </a>
+                       <a target="_blank" href="https://twitter.com/dheerajb234">
+                       <Twitter className="icon"/>
+                       </a>
+                   </div>
             </div>
             
         </div>

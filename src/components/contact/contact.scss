@@ -8,6 +8,7 @@
     .left {
         flex: 1;
         overflow: hidden;
+        background-color: crimson;
         img {
             height: 100%;
         }
@@ -49,18 +50,32 @@
             button {
                 width: 150px;
                 height: 30px;
-                color: backgroundColor;
-                background-color: crimson;
+                color: #fff;
+                background-color: #d64d68;
                 border: none;
                 border-radius: 10px;
                 font-weight: 500;
                 cursor: pointer;
+                transition: all 1s ease;
                 &:focus {
                     outline: none;
+                }
+                &:hover {
+                    background-color: crimson;
+                    color: #fff;
                 }
             }
             span {
                 color: green;
+            }
+        }
+        .itemContainer {
+            display: flex;
+            a {
+                margin: 5px;
+                .icon {
+                    color: crimson;
+                }
             }
         }
     }
