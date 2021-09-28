@@ -1,0 +1,95 @@
+@import "../../global.scss";
+.education {
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+        justify-content: space-around;
+    }
+    h1 {
+        font-size: 50px;
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+    .container {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile {
+            flex-direction: column;
+            height: 100%;
+        }
+        .card {
+            width: 250px;
+            height: 70%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0 15px;
+            transition: all 1s ease;
+            color: #fff;
+            @include mobile {
+                height: 180px;
+                margin: 10px 0;
+            }
+            &.featured {
+                width: 300px;
+                height: 75%;
+                @include mobile {
+                    width: 250px;
+                    height: 180px;
+                    margin: 1px;
+                }
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+            img {
+                width: 90%;
+                height: 70%;
+                object-fit: cover;
+                z-index: 1;
+                @include mobile {
+                    width: 30%;
+                    height: 100%;
+                }
+            }
+            &:hover {
+                background-color: $mainColor;
+                img {
+                    opacity: .2;
+                    z-index: 0;
+                }
+            }
+            .bottom {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h3 {
+                    margin-bottom: 5px;
+                    @include mobile {
+                        font-size: 14pxpx;
+                    }
+                }
+                h4 {
+                    color: #fff;
+                    @include mobile {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
