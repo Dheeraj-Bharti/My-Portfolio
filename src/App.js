@@ -22,7 +22,7 @@ function App() {
       <Introduction/>
       <Experience/>
       <Work/>
-      {/* <Portfolio/> */}
+      <Portfolio/>
       <Education/>
       {/* <Testimonials/> */}
       <Contact/>

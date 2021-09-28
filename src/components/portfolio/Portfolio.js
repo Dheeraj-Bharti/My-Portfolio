@@ -2,58 +2,41 @@ import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import {
-    featuredPortfolio,
-    webPortfolio,
-    mobilePortfolio,
-    designPortfolio,
-    contentPortfolio,
+    primary,
+    secondary
   } from "../../data";
   
 
 const Portfolio = () => {
-    const [selected, setSelected] = useState("featured");
+    const [selected, setSelected] = useState("primary");
     const [data, setData] = useState([]);
     const list = [
         {
-            id:"featured",
-            title: "Featured"
+            id:"primary",
+            title: "Primary"
         },
         {
-            id:"web",
-            title: "Web App"
-        },
-        {
-            id:"mobile",
-            title: "Mobile App"
-        },
-        {
-            id:"branding",
-            title: "Branding"
-        },
+            id:"secondary",
+            title: "Secondary"
+        }
     ]
     useEffect(() => {
         switch(selected){
-            case "featured":
-                setData(featuredPortfolio);
+            case "primary":
+                setData(primary);
                 break;
-            case "web":
-                setData(webPortfolio);
-                break;
-            case "mobile":
-                setData(mobilePortfolio);
-                break;
-            case "branding":
-                setData(contentPortfolio);
+            case "secondary":
+                setData(secondary);
                 break;
             default:
-                setData(featuredPortfolio);
+                setData(primary);
                 
         }
        
     }, [selected])
     return (
         <div className="portfolio" id="portfolio">
-            <h1>Portfolio</h1>
+            <h1>Skills</h1>
             <ul>
                {list.map(item=>(
                    <PortfolioList title={item.title} 

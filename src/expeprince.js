@@ -5,7 +5,7 @@ export const experience = [
       "title": "Member of Technical Staff",
       "dates": "Mar 2021 - Present",
       "duties": [
-        "Working as a Angular UI Developer for the banking appication.",
+        "Working as a Angular UI Developer for the banking application.",
         "The client banking ecosystem includes registration app, online banking app and the backoffice application.",
         "My role is to develop a mobile responsive, user friendly and fixel perfect application.",
         "Working in a agile world with two weeks of sprint with production happening every second monday"

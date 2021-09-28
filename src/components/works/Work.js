@@ -41,7 +41,8 @@ const Work = () => {
 
     return (
         <div className="work" id="works">
-          
+            <h1>Personal Work</h1>
+        <div className="workContainer">
             <div className="slider" style={{transform:`translateX(-${currentSlide*100}vw)`}}>
                { data.map((d)=>(
                   <div className="container">
@@ -69,6 +70,7 @@ const Work = () => {
             </div>
             <img src="assets/arrow.png" className="arrow left" alt="" onClick={()=>handleClick("left")} />
             <img src="assets/arrow.png" className="arrow right" alt=""  onClick={()=>handleClick()} />
+        </div>
         </div>
     )
 }
